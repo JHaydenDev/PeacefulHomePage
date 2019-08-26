@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-border: black solid 1px;
-`;
+import React from "react";
+import { Wrapper } from "../StylingFolder/style";
 
 function Notes(props) {
-
   return (
     <Wrapper>
-    <div>
-      <h2>Notes!!!!</h2>
-    </div>
+      <div>
+        <h2>Notes!!!!</h2>
+      </div>
     </Wrapper>
   );
 }
-
 
 export default Notes;

@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
+import { Wrapper } from "../StylingFolder/style";
 
-const Wrapper = styled.div`
-border: black solid 1px;
-`;
+
 
 function YouTube(props) {
   return (
     <Wrapper>
-    <div>
-      <h2>YouTube!!!!</h2>
-    </div>
+      <div>
+        <h2>YouTube!!!!</h2>
+      </div>
     </Wrapper>
   );
 }

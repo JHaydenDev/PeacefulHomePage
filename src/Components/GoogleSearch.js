@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Wrapper from "../StyledComponentsThemes/StyledComponents"
+import React from "react";
+import { Wrapper } from "../StylingFolder/style";
 
 function GoogleSearch(props) {
   return (

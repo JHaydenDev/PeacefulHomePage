@@ -5,13 +5,12 @@ import Weather from "./Components/Weather";
 import NoteApp from "./Components/NoteApp";
 import Youtube from "./Components/YouTubeMusic";
 import GoogleSearch from "./Components/GoogleSearch";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-  border: black solid 1px;
-`;
+import {Wrapper} from "./StylingFolder/style"
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <Wrapper>
