@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import Clock from "./Components/Clock";
 import Weather from "./Components/Weather";
-import Youtube from "./Components/YouTubePlayer/YouTubeMusic";
 import GoogleSearch from "./Components/GoogleSearch";
 import {Wrapper} from "./StylingFolder/style"
 
@@ -17,7 +16,6 @@ function App() {
         <div>
           <Clock />
           <Weather />
-          <Youtube />
           <GoogleSearch />
         </div>
       </Wrapper>
