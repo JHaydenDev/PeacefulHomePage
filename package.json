@@ -2,7 +2,7 @@
   "name": "peaceful-homepage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/JHaydenDev/PeacefulHomePage",
+  "homepage": "http://jhaydendev.github.io/PeacefulHomePage",
   "dependencies": {
     "axios": "^0.19.0",
     "gh-pages": "^2.1.1",
