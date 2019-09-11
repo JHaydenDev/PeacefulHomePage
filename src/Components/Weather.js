@@ -40,7 +40,7 @@ function Weather(props) {
 
   //Fetches weather data based on coordinates and sets the state
   useEffect(() => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=5dac0afa27fec8d40372cc6e258f2a8b`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=5dac0afa27fec8d40372cc6e258f2a8b`;
     async function fetchData() {
       const response = await axios(url);
       const data = response.data;
