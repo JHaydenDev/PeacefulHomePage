@@ -7,8 +7,7 @@ function Clock(props) {
   return (
     <Wrapper>
       <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {timer.toLocaleTimeString()}.</h2>
+        <h2>Welcome, It is {timer.toLocaleTimeString()}.</h2>
       </div>
     </Wrapper>
   );

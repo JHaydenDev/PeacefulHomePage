@@ -1,11 +1,14 @@
 import React from "react";
-import { Wrapper } from "../StylingFolder/style";
+import { Wrapper, GoogleButton, GoogleInput } from "../StylingFolder/style";
 
 function GoogleSearch(props) {
   return (
     <Wrapper>
       <div>
-        <h2>Google Search!!!!</h2>
+        <form action="https://www.google.com/search" method="GET">
+          <GoogleInput type="text" name="q" placeholder="Google" />
+          <GoogleButton value="Search">Search</GoogleButton>
+        </form>
       </div>
     </Wrapper>
   );

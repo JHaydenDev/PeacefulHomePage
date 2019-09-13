@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Wrapper } from "../StylingFolder/style";
+import {
+  WeatherWrapper,
+  WeatherImg,
+  WeatherInfo
+} from "../StylingFolder/style";
 import axios from "axios";
+import Below0 from "../Assets/WeatherImgs/Below0.jpg";
+import Above73 from "../Assets/WeatherImgs/Above73.jpg";
 
 function Weather(props) {
   //Sets state
@@ -60,26 +66,48 @@ function Weather(props) {
     const Celsius = num - 273.25;
     return Math.round(Celsius);
   }
-  function convertKelvintoFahrenheit(num){
+  function convertKelvintoFahrenheit(num) {
     const Celsius = num - 273.25;
-    return Math.round((Celsius * 1.8) + 32)
+    return Math.round(Celsius * 1.8 + 32);
+  }
+  //Changes background based on temperature and weather.
+  function changeImg(num) {
+    if (num > -30 && num <= 0) {
+      return `url(${Below0})`;
+    } else if (num > 1 && num <= 30) {
+      return `url(${Below0})`;
+    } else if (num > 31 && num <= 59) {
+      return `url(${Below0})`;
+    } else if (num > 60 && num <= 72) {
+      return `url(${Below0})`;
+    } else if (num > 73 && num <= 100) {
+      return `url(${Above73})`;
+    }
   }
 
   return (
-    <Wrapper>
-      <div>
-        <h2>WEATHER!!!!</h2>
-        <p>Latitude:{latitude}</p>
-        <p>Longitude:{longitude}</p>
-        <h3>Today:</h3>
-        <p>{description}</p>
-        <h3>Temperature:</h3>
-        <p>Celsius: {convertKelvinToCelsius(temperature)}°</p>
-        <p>Fahrenheit: {convertKelvintoFahrenheit(temperature)}°</p>
-        <h3>Humidity:</h3>
-        <p>{humidity}%</p>
-      </div>
-    </Wrapper>
+    <WeatherWrapper>
+      <WeatherImg
+        style={{
+          backgroundImage: `${changeImg(
+            convertKelvintoFahrenheit(temperature)
+          )}`
+        }}
+      >
+        <WeatherInfo>
+          <h2>WEATHER!!!!</h2>
+          <p>Latitude: {latitude}</p>
+          <p>Longitude: {longitude}</p>
+          <h3>Today:</h3>
+          <p>{description}</p>
+          <h3>Temperature:</h3>
+          <p>Celsius: {convertKelvinToCelsius(temperature)}°</p>
+          <p>Fahrenheit: {convertKelvintoFahrenheit(temperature)}°</p>
+          <h3>Humidity:</h3>
+          <p>{humidity}%</p>
+        </WeatherInfo>
+      </WeatherImg>
+    </WeatherWrapper>
   );
 }
 
