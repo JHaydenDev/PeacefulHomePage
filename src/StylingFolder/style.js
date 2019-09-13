@@ -46,6 +46,6 @@ width: 30%;
 export const GoogleButton = styled.button`
 border-radius: 25px;
 height: 30px;
-width: 10%;
+width: 100px;
 margin: 0 1%;
 `;
